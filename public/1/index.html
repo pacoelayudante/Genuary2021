@@ -1,25 +1,29 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="es" translate="no"><head>
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abel&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="height=height, initial-scale=1.0">
 
   </head>
-  <body onpointerdown="let coso=document.getElementById('menu'); coso.style.display=coso.style.display==='block'?'none':'block'">
-    <div id="menu" class="menu">
+  <body onpointerup="let coso=document.getElementById('menu'); coso.style.display=coso.style.display==='block'?'none':'block';coso.style.animation='none'">
+    <div id="cubre" onpointerup="event.target.style.display='none'"></div><div id="menu">
       <p>
       Genuary 2021 #1<br>
-        <a onpointerdown="event.stopPropagation()" href="https://genuary2021.github.io/">Genuary</a> es como Inktober pero de arte generativo y durante Enero.<br> Es decir, un desafío-estímulo para crear pequeñas obras de <a href="https://es.wikipedia.org/wiki/Arte_generativo" onpointerdown="event.stopPropagation()">arte generativo</a> durante cada día de Enero. Existen propuestas diarias opcionales:<br>
-      *1 // TRIPLE NESTED LOOP<br>
+        <a onpointerup="event.stopPropagation()" href="https://genuary2021.github.io/">Genuary</a> es como Inktober pero de arte generativo y durante Enero.<br> Es decir, un desafío-estímulo para crear pequeñas obras de <a href="https://es.wikipedia.org/wiki/Arte_generativo" onpointerup="event.stopPropagation()">arte generativo</a> durante cada día de Enero. Existen propuestas diarias opcionales:<br>
+      <br>*1 // TRIPLE NESTED LOOP<br>
       <br>
       En realidad el 'triple nested' está en el dibujito dentro de cada planta, es lo de menos, jaja.<br>
-    La paleta de colores la saco de una imagen aleatoria de <a onpointerdown="event.stopPropagation()" href="https://unsplash.com/">unsplash</a>, una web llena de fotos para uso gratuito.
-    <br><a onpointerdown="event.stopPropagation()" href="https://github.com/pacoelayudante/Genuary2021/public/1">https://github.com/pacoelayudante/Genuary2021/public/1</a><br>
-    Paco Álvarez Lojo (<a onpointerdown="event.stopPropagation()" href="https://www.twitter.com/pacoelayudante/">TW</a> <a onpointerdown="event.stopPropagation()" href="https://www.instagram.com/pacoelayudante/">IG</a>)
+    La paleta de colores la saco de una imagen aleatoria de <a onpointerup="event.stopPropagation()" href="https://unsplash.com/">unsplash</a>, una web llena de fotos para uso gratuito.
+    <br><br>Código: <a style="overflow-wrap: anywhere;" onpointerup="event.stopPropagation()" href="https://github.com/pacoelayudante/Genuary2021/tree/master/public/1">https://github.com/pacoelayudante/Genuary2021/public/1</a><br><br>
+    Paco (<a onpointerup="event.stopPropagation()" href="https://www.twitter.com/pacoelayudante/">TW</a> <a onpointerup="event.stopPropagation()" href="https://www.instagram.com/pacoelayudante/">IG</a>)<br>
+  Creado en <a href="https://p5js.org/" onpointerup="event.stopPropagation()">p5.js</a>, una biblioteca de JavaScript para la programación creativa.<br>
+  Tipografía <a href="https://fonts.google.com/specimen/Abel" onpointerup="event.stopPropagation()">Abel</a> de <a href="http://www.madtype.com/" onpointerup="event.stopPropagation()">MadType</a>
         
       </p>
-      <p onpointerdown="event.stopPropagation()" id="panel">
-    
+      <p onpointerup="event.stopPropagation()" id="panel">    
       </p>
     </div>
     <script src="sketch.js"></script>
