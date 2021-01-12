@@ -38,6 +38,7 @@ a:visited {
   z-index: 1;
   color: #DDD;
   animation: fade 6s forwards;
+  background-color: #000;
 }
 
 button {
@@ -55,7 +56,7 @@ button {
 -webkit-appearance: none;
   border: 1px solid #ddd;
   color: #ddd;
-  background-color: transparent;
+  background-color: #444A;
   padding: 5px 8px;
   margin: 0 0.0725em;
   border-radius: 4px 16px 4px 16px;
@@ -67,7 +68,7 @@ button[disabled] {
   color: #ddd3;  
 }
 button.marcado {
-  background-color: #ddd4;
+  /*background-color: #ddd;*/
   box-shadow:inset 0px 0px 0px 3px #ddd;
 }
 
