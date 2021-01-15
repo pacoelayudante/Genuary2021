@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+
+<head>
+  <script src="../p5.min.js"></script>
+  <script src="../tracery/tracery.js"></script>
+  <script src="../tracery/tracery-vis.js"></script>
+  <script src="../tracery/mods-eng-basic.js"></script>
+  <script src="../tracery/iterator.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="height=height, initial-scale=1.0">
+
+</head>
+
+<body>
+  <div id="menu" onpointerup="this.style.display=this.style.display==='block'?'none':'block';">
+    <p>
+      Genuary 2021 #3<br>
+      <a onpointerup="event.stopPropagation()" href="https://genuary2021.github.io/">Genuary</a> es como Inktober pero
+      de arte generativo y durante Enero.<br> Es decir, un desafío-estímulo para crear pequeñas obras de <a
+        href="https://es.wikipedia.org/wiki/Arte_generativo" onpointerup="event.stopPropagation()">arte generativo</a>
+      durante cada día de Enero. Existen propuestas diarias opcionales:<br>
+      <br>3) Make something human<br>
+      <br>
+      Esta vez decidí trabajar con texto en vez de un generador de imagenes o animaciones. No suelo escribir, asique no me salio super facil, pero fue muy divertido ver los resultados bizarros con las pocas palabras que le dí al sistema.</br>
+      Ah, sí. Esto funciona con un sistema al que yo le indico diferentes estructuras, frases con "huecos" para llenar y palabras o mini frasesitas. Le indico como puede combinarlas y a partir de eso la computadora genera las diferentes variaciones que se leen.</br>
+      La idea surgio luego de pensar sobre que significa "hacer algo humano" y primero pense en cosas visuales... luego pense en que algo humano es una historia... de ahi pense que podrian ser historias de la infancia generativas, pero me di cuenta que iba a ser demasiado jodido hacer algo con eso que quede mas o menos bien. De ahí salte a lo de las disculpas, que son algo bien humano, y es mas facil crear algo divertido relativamente coherente.
+      <br><br>Código: <a style="overflow-wrap: anywhere;" onpointerup="event.stopPropagation()"
+        href="https://github.com/pacoelayudante/Genuary2021/tree/master/public/3">https://github.com/pacoelayudante/Genuary2021/tree/master/public/3</a><br><br>
+      Paco (<a onpointerup="event.stopPropagation()" href="https://www.twitter.com/pacoelayudante/">TW</a> <a
+        onpointerup="event.stopPropagation()" href="https://www.instagram.com/pacoelayudante/">IG</a>)<br>
+      Me robe mucho del estilo de <a href="https://codepen.io/mubangadv/pen/rXrOQa" onpointerup="event.stopPropagation()">este ejemplo de codepen</a>.<br/>
+      Para generar los mensajes usé <a href="https://tracery.io/" onpointerup="event.stopPropagation()">Tracery</a>, una herramienta super sencilla para generar textos procedurales.<br>
+      El resto lo hice en <a href="https://p5js.org/" onpointerup="event.stopPropagation()">p5.js</a>, una biblioteca de
+      JavaScript para la programación creativa.<br>
+      La tipografía de la app es <a href="https://www.dafont.com/suplexmentary-comic-nc.font" onpointerup="event.stopPropagation()">Suplexmentary Comic NC</a> de <a
+        href="https://harvettfox96.neocities.org/" onpointerup="event.stopPropagation()">Jayvee Enaguas</a></br>
+      Esta tipografía es <a href="https://fonts.google.com/specimen/Abel" onpointerup="event.stopPropagation()">Abel</a> de <a
+        href="http://www.madtype.com/" onpointerup="event.stopPropagation()">MadType</a>
+
+    </p>
+    <p onpointerup="event.stopPropagation()" id="panel">
+    </p>
+  </div>
+
+  <div id="app">
+    <div id="cabezera" onpointerup="let coso=document.getElementById('menu'); coso.style.display=coso.style.display==='block'?'none':'block';">
+      <div class="avatar"></div>
+      <div class="numero">+314 15-926-5358</div>
+      <div class="visto">Hoy 6:18</div>
+    </div>
+    <div id="carta">
+      <div class="hora">Hoy 6:18</div>
+    </div>
+    <div id="entrada">
+      <div id="respuesta">.</div>
+      <div id="enviar"></div>
+    </div>
+  </div>
+  <script src="./sketch.js"></script>
+
+
+</body>
+
+</html>
