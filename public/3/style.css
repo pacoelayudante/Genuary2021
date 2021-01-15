@@ -11,6 +11,7 @@ html, body {
 @font-face {
   font-family: 'chat';
   src: url('./suplexmentary-comic-nc.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./suplexmentary-comic-nc.woff2') format('woff2'), /* Safari, Android, iOS */
 }
 
 #app {
