@@ -10,12 +10,13 @@ html, body {
 
 @font-face {
   font-family: 'chat';
-  src: url('./suplexmentary-comic-nc.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('./suplexmentary-comic-nc.woff2') format('woff2'), /* Safari, Android, iOS */
+  src: url('./suplexmentary-comic-nc.woff') format('woff'),
+  url('./suplexmentary-comic-nc.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./suplexmentary-comic-nc.woff2') format('woff2');
 }
 
 #app {
-  font-family: 'chat', Comic Sans MS, Comic Sans, cursive;
+  font-family: 'chat', Comic Sans MS, Comic Sans, sans-serif;
   position: relative;
   margin: auto auto;
   width: 24rem;
@@ -194,7 +195,8 @@ a:visited {
   color: #DDD;
   /*animation: fade 6s forwards;*/
   background-color: #000;
-  overflow: auto;
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 button, #entrada {
