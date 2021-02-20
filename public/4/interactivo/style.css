@@ -1,0 +1,34 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+}
+
+canvas {
+  display: block;
+}
+
+.panel {
+  max-width: 20em;
+  font-family: 'Fredericka the Great', cursive;
+  position: absolute;
+  color: white;
+  margin: 0.5em;
+  user-select: none; 
+  text-shadow: -2px 2px 3px black, 2px -2px 3px black;
+}
+
+.panel a {
+  text-decoration: underline double #ffffff90 0px;
+   cursor: pointer;
+}
+.panel .oculto {
+  display: none;
+}
+
+.panel.abajo {
+  bottom: 0;
+}

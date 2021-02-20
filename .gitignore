@@ -1,3 +1,6 @@
+*.xcf
+public/4/capturas/*
+
 # Logs
 logs
 *.log

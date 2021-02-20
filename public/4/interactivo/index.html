@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+
+<head>
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+  <script src="p5.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <link href="../../fredericka_the_great/fredericka_the_great.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="panel" onmousedown="event.stopPropagation()">
+    <div id="sin-zoom">Podés <a id="generar">generar nuevas flores</a>.<br>También podés tocar una flor para verla un
+      poco mejor.</div>
+    <div id="con-zoom" class="oculto">Ahora que estás viendo una flor de cerca, podés <a id="mutar">generar
+        mutaciones</a>.<br>También podes volver a ver las demás flores tocando en cualquier lado.</div>
+  </div>
+  <script src="sketch.js"></script>
+  <div class="panel abajo" onmousedown="event.stopPropagation()">
+    Por último, es posible descargar una imagen de lo que estás viendo.<br/>
+    Puede ser con <a id="descargar-con">este fondo</a>, o con un <a id="descargar-sin">fondo transparente</a>
+  </div>
+
+</body>
+
+</html>

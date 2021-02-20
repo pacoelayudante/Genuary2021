@@ -1,0 +1,38 @@
+/*
+Extraído de Google Fonts
+https://fonts.google.com/specimen/Fredericka+the+Great
+
+These fonts are licensed under the Open Font License.
+You can use them freely in your products & projects - print or digital, commercial or otherwise. However, you can't sell the fonts on their own.
+This isn't legal advice, please consider consulting a lawyer and see the full license for all details.
+
+About Fredericka the Great
+Fredericka recalls my college days of nights spent creating handdrawn presentation boards, architectural sketches and student union posters.
+She's fun, she's casual, she's preppy, she's classic, she's Great! Designed by Crystal Kluge of Tart Workshop.
+
+Tart Workshop
+*/
+
+/*
+use
+font-family: 'Fredericka the Great', cursive;
+*/
+
+/* latin-ext */
+@font-face {
+  font-family: 'Fredericka the Great';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(./fredericka_the_great_latin_ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fredericka the Great';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(./fredericka_the_great_latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+    color: white;
+    background-color: black;
+    background: #0C3823;
+    background: linear-gradient(230deg, #30694B 0%, #0C3823 100%);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cabin Sketch';
+}
+
+body>div{
+    width: 100%;
+    max-width: 35em;
+    border: 1em solid;
+    box-sizing: border-box;
+    border-image-source: url(./esquinas.png);
+    border-image-slice: 50%;
+    min-height: 100%;
+    border-image-width: 7;
+    margin: 0 auto;
+    padding: 3em 0;
+}
+
+p {
+    margin: 0 .2em;
+    text-align: justify;
+    word-wrap: break-word;
+}
+h1,h2,h3,h4 {
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Fredericka the Great';
+    display:inline-block;
+    opacity: 50%;
+}
+h1 {
+    opacity: 90%;
+    display:block;
+    text-align: center;
+    font-size: 2em;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.title>div {
+  display: inline-block;
+}
+
+a, a:visited, a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+.boton {
+  border: #ffffff90 2px dashed;
+  padding: 0.75em;
+  text-align: center;
+  font-family: 'Fredericka the Great';
+  margin-top: 1em;
+  cursor: pointer;
+}
+.boton:hover {
+  color: black;
+  text-shadow: 1px 1px white, -1px -1px white;
+}
+.aclaracion {
+  opacity: 50%;
+  font-size: 0.85em;
+}
+.opciones {
+  margin: 2em auto;
+  max-width: 16em;
+}
+
+.apendice {
+  padding: 2em 3em;
+}
