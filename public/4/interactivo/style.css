@@ -21,9 +21,10 @@ canvas {
   text-shadow: -2px 2px 3px black, 2px -2px 3px black;
 }
 
-.panel a {
+.panel a, .panel a:visited, .panel a:active {
   text-decoration: underline double #ffffff90 0px;
    cursor: pointer;
+   color: inherit;
 }
 .panel .oculto {
   display: none;

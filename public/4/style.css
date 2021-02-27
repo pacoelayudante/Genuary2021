@@ -4,6 +4,7 @@ body {
   padding: 0;
   min-height: 100%;
   width: 100%;
+
 }
 
 body {
@@ -16,8 +17,15 @@ body {
     align-items: center;
     font-family: 'Cabin Sketch';
 }
+::-webkit-scrollbar {
+  background: #0C3823;
+}
+::-webkit-scrollbar-thumb {
+  background: #30694B;
+  border: 3px solid #0C3823;
+}
 
-body>div{
+body>.menu{
     width: 100%;
     max-width: 35em;
     border: 1em solid;
@@ -61,9 +69,13 @@ h1 {
 
 a, a:visited, a:hover {
   color: inherit;
-  text-decoration: inherit;
+  text-decoration-color: #ffffff90;
 }
+
 .boton {
+  text-decoration: none;
+}
+.boton>div {
   border: #ffffff90 2px dashed;
   padding: 0.75em;
   text-align: center;
@@ -85,5 +97,188 @@ a, a:visited, a:hover {
 }
 
 .apendice {
-  padding: 2em 3em;
+  padding: 2em 1.7em;
+}
+
+@keyframes scrolling {
+  from{
+      background-position-x: 0;
+  }
+  to{
+      background-position-x: 100%;
+  }
+}
+@keyframes scrolling-inv {
+  from{
+      background-position-x: 0;
+  }
+  to{
+      background-position-x: -100%;
+  }
+}
+@keyframes scrolling-y {
+  from{
+      background-position-y: 0;
+  }
+  to{
+      background-position-y: -135px;
+  }
+}
+.flores {
+  overflow: hidden;
+  margin: 0.5em -1em;  
+  height: 68px;
+}
+.flores>div{
+  background-size: 50% 100%;/*600px 68px;*/
+  background-repeat: repeat;
+  animation: scrolling 15s linear infinite;  
+  background-image: url(./flores_2_largo_w960.png);
+  width: 1200px;
+  height: 100%;
+}
+
+.flores._2 {
+  height: 135px;
+}
+.flores._2>div {
+  background-image: url(./flores_5_w600.png);
+  width: 600px;
+  height: 100%;
+  animation: scrolling-inv 15s linear infinite, scrolling-y 15s linear infinite;  
+}
+
+.flores._3>div{
+  background-image: url(./flores_3_largo_w960.png);
+}
+
+.flores._mutacion>div {
+  background-image: url(./ejemplo_mutacion_azul_960.png);
+}
+
+.expandir {
+  margin: 0.5em 0em;
+  width: 100%;
+  height: auto;
+}
+
+.colapsado {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height ease-in-out 0.7s;
+}
+
+.menu-galeria {
+  padding: 1em 0;
+}
+.menu-galeria>p{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  overflow: auto;
+}
+.galeria>* {
+  height: 25vh;
+  flex-grow: 0;
+  flex-shrink: 1;
+  max-height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.galeria.fina>* {
+  height: 15vh;
+}
+
+.galeria>*>img {
+  max-height: 100%;
+  flex-shrink: 1;
+}
+.galeria img {
+  cursor: pointer;
+}
+
+.anim>*:first-child {
+  animation: anim-se-puede-scrollear 2s ease;
+}
+
+#cubreventana {
+  user-select: none;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1;  
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  margin: 0 auto;
+  text-align: center;
+
+  background: #0C3823A0;
+  background: linear-gradient(230deg, #30694BA0 0%, #0C3823A0 100%);
+}
+#cubreventana>img{
+  height: 100%;
+}
+
+.escondida {
+  pointer-events: none;
+}
+img.escondida {
+  display: none;
+}
+#cubreventana.escondida {
+  animation: aparicion 0.5s forwards reverse;
+}
+#cubreventana:not(.escondida) {
+  animation: aparicion2 0.5s;
+}
+
+a[href*="http"]::after{
+  content: '🔗';
+  display: inline-block;
+  font-size: 50%;
+  vertical-align: top;
+}
+
+@keyframes aparicion {
+  0% {
+    margin-top: -5em;    
+    opacity: 0%;
+  }
+  1% {
+    margin-top: -5em;
+  }
+  100% {
+    margin-top: 0;   
+    opacity: 100%; 
+  }
+}
+@keyframes aparicion2 {
+  0% {
+    margin-top: -5em;    
+    opacity: 0%;
+  }
+  1% {
+    margin-top: -5em;
+  }
+  100% {
+    margin-top: 0;   
+    opacity: 100%; 
+  }
+}
+
+@keyframes anim-se-puede-scrollear {
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: -30%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }

@@ -1,28 +1,38 @@
 <!DOCTYPE html><html lang="es">
     <head>
         <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./style.css">
         <meta charset="utf-8">
         <link href="../cabin_sketch/cabin_sketch.css" rel="stylesheet">
         <link href="../fredericka_the_great/fredericka_the_great.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
-
     </head>
     <body>
-        <div>
+        <div class="menu">
             <div class="title">
                 <div><h1>Small Areas Of Symmetry</h1>
                 <h4>Genuary</h4><h3>#4</h3></div>
             </div>
+            <div class="flores"><div></div></div>
             <p>
-            La cuarta propuesta del Genuary significa "Pequeñas Áreas de Simetría".
+            La cuarta propuesta del <a href="#" onpointerdown="document.getElementById('genuary').style.maxHeight='26em'">Genuary</a> significa "Pequeñas Áreas de Simetría".
+            </p>
+            <p class="colapsado" id="genuary">
+            <a target="_blank" href="https://genuary2021.github.io/">Genuary</a> es como Inktober pero
+            de arte generativo y durante Enero.<br> Es decir, un desafío-estímulo para crear pequeñas obras de
+            <a target="_blank" href="https://es.wikipedia.org/wiki/Arte_generativo">arte generativo</a>
+            durante cada día de Enero. Existen propuestas temáticas o disparadores para cada día.<br/>
+            Obviamente no llegué a hacer todos los días de Enero una producción pero aún así voy a seguir las consignas a mi tiempo.<br/>
+            En wikipedia dicen que el "arte generativo a menudo se refiere al arte algorítmico (obras de arte generadas por computadora mediante algoritmos),
+            pero los artistas también lo pueden hacer utilizando sistemas de química, biología, mecánica y robótica, materiales inteligentes,
+            aleatorización manual, modelos matemáticos, mapeo de datos, simetría, enladrillando y más".
             </p>
             <div class="opciones">
-                <a href="./interactivo/"><div class="boton">VER INTERACTIVO</div></a>
+                <a href="./interactivo/" class="boton"><div>VER INTERACTIVO</div></a>
                 <p class="aclaracion">(es demandante, no funciona bien en celulares, recomiendo verlo en la compu)</p>
                 
-                <div class="boton">VER GALERÍA</div>
+                <a href="./galeria.html" class="boton"><div class="boton">VER GALERÍA</div></a>
             </div>
+            <div class="flores _2"><div></div></div>
             <p>
             Lo primero que me imaginé fue una especie de enredadera con flores. La enredadera sería desorganizada,
             mientras que las flores serían islas de simetría.<br/>
@@ -31,6 +41,7 @@
             Al final me deje llevar en este intento de hacer un generador de flores bien variadas, tardé demasiado en terminarlo y quede
             mas o menos satisfecho. De alguna manera siento que debería haber tardado menos.<br/>
             </p>
+            <div class="flores _3"><div></div></div>
             <p>
             El algoritmo tiene básicamente tres componentes. Uno define el color y gradiente, otro define la forma de los petalos,
             y finalmente el último define el arco y distribución de esos pétalos.<br/>
@@ -38,14 +49,19 @@
             sería posible de manera muy sencilla "guardar" una flor, generarle mutaciones e incluso mezclarla con otra flor para generar una 
             nueva flor que tenga caracteristicas mixtas. Pero no quise perder más tiempo y en la demostración solo deje la opcion de "mutar" una flor.
             </p>
+            <br/>
+            <p>Paco</p>
+            <!--<div class="flores mutacion"><div></div></div>-->
+            <img class="expandir" src="./ejemplo_mutacion_azul_960.png"/>
+            <p class="aclaracion">(ejemplo de varias generacions de mutacion de una flor)</p>
             <div class="apendice">
-                github<br/>
-                genuary<br/>
-                arte generativo<br/>
-                genuary<br/>
-                El código fuente del generador está alojado en <a href="">este repo de github</a>.
-                Las tipografías usadas acá son <a href="https://fonts.google.com/specimen/Fredericka+the+Great">Fredericka the Great</a>
-                de <a href="https://twitter.com/tartworkshop">Crystal Kluge</a> y <a href="https://fonts.google.com/specimen/Cabin+Sketch">Cabin Sketch</a> de <a href="https://twitter.com/impallaritype">Pablo Impallari</a>.
+                El código fuente del generador está alojado en <a href="https://github.com/pacoelayudante/Genuary2021/tree/master/public/4/interactivo" target="_blank">este repo de github</a>.<br/>
+                El generador en sí esta programado en <a href="https://p5js.org/" onpointerup="event.stopPropagation()" target="_blank">p5.js</a>, una biblioteca de
+      JavaScript para la programación creativa.<br>
+                Las tipografías usadas acá son <a href="https://fonts.google.com/specimen/Fredericka+the+Great" target="_blank">Fredericka the Great</a>
+                de <a href="https://twitter.com/tartworkshop" target="_blank">Crystal Kluge</a>
+                y <a href="https://fonts.google.com/specimen/Cabin+Sketch" target="_blank">Cabin Sketch</a> de <a href="https://twitter.com/impallaritype" target="_blank">Pablo Impallari</a>.<br/>
+                Yo tengo un <a href="https://www.twitter.com/pacoelayudante/" target="_blank">Twitter</a> y un <a href="https://www.instagram.com/pacoelayudante/" target="_blank">Instagram</a> aunque la verdad no subo muchas cosas.<br/>
             </div>
         </div>
     </body>

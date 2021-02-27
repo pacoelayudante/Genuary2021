@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta charset="utf-8">
+    <link href="../cabin_sketch/cabin_sketch.css" rel="stylesheet">
+    <link href="../fredericka_the_great/fredericka_the_great.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="cubreventana" class="escondida">
+        <img id="verimagenlow" />
+        <img id="verimagen" />
+    </div>
+    <div class="menu-galeria">
+        <p><a href="#" onpointerup="history.back()">Volver</a></p>
+        <div class="title">
+            <div><h1>Galería</h1></div>
+        </div>
+        <p>Se puede escrolear para el costado. Se pueden tocar para ver en mas detalle.</p>
+        <div class="galeria anim">
+            <img src="./capturas/_jpg360/varias_flores_1.jpg" />
+            <img src="./capturas/_jpg360/varias_flores_2.jpg" />
+            <img src="./capturas/_jpg360/varias_flores_3.jpg" />
+            <img src="./capturas/_jpg360/varias_flores_4.jpg" />
+            <img src="./capturas/_jpg360/varias_flores_5.jpg" />
+            <img src="./capturas/_jpg360/varias_flores_6.jpg" />
+            <img src="./capturas/_jpg360/varias_flores_7.jpg" />
+        </div><br/><br/>
+        <p>Aquí podemos ver el efecto de la mutación en sucesivas generaciones.</p>
+        <div class="galeria fina">
+            <img src="./capturas/_360/muta_1.png" />
+            <img src="./capturas/_360/muta_2.png" />
+            <img src="./capturas/_360/muta_3.png" />
+            <img src="./capturas/_360/muta_4.png" />
+            <img src="./capturas/_360/muta_5.png" />
+        </div>
+        <div class="galeria fina">
+            <img src="./capturas/_360/bmuta_1.png" />
+            <img src="./capturas/_360/bmuta_2.png" />
+            <img src="./capturas/_360/bmuta_3.png" />
+            <img src="./capturas/_360/bmuta_4.png" />
+            <img src="./capturas/_360/bmuta_5.png" />
+            <img src="./capturas/_360/bmuta_6.png" />
+        </div><br/><br/>
+        <p>Varias flores individuales de muestra.</p>
+        <div class="galeria">
+            <img src="./capturas/_jpg360/flor_2_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_4_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_5_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_6_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_3_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_7_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_8_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_9_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_10_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_11_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_14_fondo.jpg" />
+            <img src="./capturas/_jpg360/flor_16_fondo.jpg" />
+        </div><br/><br/>
+        <p>Mutaciones paralelas (en vez de sucesivas) de una misma flor.</p>
+        <div class="galeria">
+            <div>
+                <img src="./capturas/_jpg360/flor_1_fondo.jpg" />
+                <img src="./capturas/_jpg360/flor_1_prole.jpg" />
+            </div>
+            <div>
+                <img src="./capturas/_jpg360/flor_12_fondo.jpg" />
+                <img src="./capturas/_jpg360/flor_12_prole.jpg" />
+            </div>
+            <div>
+                <img src="./capturas/_jpg360/flor_13_fondo.jpg" />
+                <img src="./capturas/_jpg360/flor_13_prole.jpg" />
+            </div>
+            <div>
+                <img src="./capturas/_jpg360/flor_15_fondo.jpg" />
+                <img src="./capturas/_jpg360/flor_15_prole.jpg" />
+            </div>
+            <div>
+                <img src="./capturas/_jpg360/flor_17_fondo.jpg" />
+                <img src="./capturas/_jpg360/flor_17_prole.jpg" />
+            </div>
+        </div>
+    </div>
+    <script>
+        let ventana = document.getElementById("cubreventana");
+        let ver = document.getElementById("verimagen");
+        let verlow = document.getElementById("verimagenlow");
+        for (const img of document.getElementsByTagName("img")) {
+            if (img===ver) continue;
+            img.addEventListener("pointerup", () => {
+                const imgHigh = img.src.replace(/\/capturas\/(.+\/)/, "/capturas/");                
+                const state = {imgLow:img.src, imgHigh:imgHigh};
+                history.pushState(state,"ver",location.href);
+                window.onpopstate({state:state});
+            })
+        }
+
+        ventana.addEventListener("pointerup", (ev) => {
+            history.back();
+        });
+        verlow.addEventListener("load", () => {
+            ventana.scrollTo({ left: ventana.scrollWidth / 2 - ventana.clientWidth / 2});
+            ver.classList.remove("escondida");
+        })
+        ver.addEventListener("load", () => {
+            verlow.classList.add("escondida");
+        })
+
+        window.onpopstate = (event) => {
+            console.log(event.state);
+            if (event.state){
+                if (event.state.imgLow) {
+                    verlow.src = event.state.imgLow;
+                    verlow.classList.remove("escondida");
+                    verlow.classList.remove("escondida");
+                    ver.classList.add("escondida");
+                }
+                if (event.state.imgHigh) {
+                    ver.src = event.state.imgHigh;
+                    ventana.classList.remove("escondida");
+                }
+            }
+            else {
+                ventana.classList.add("escondida");
+            }
+        }
+    </script>
+</body>
+
+</html>
